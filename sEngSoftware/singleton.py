@@ -15,7 +15,7 @@ class Cachorro(Animal):
         if cls._instance is None:
             cls._instance = super(Cachorro, cls).__new__(cls)
         return cls._instance
-    def __init__(self, nome, idade, porte, nomeTutor):
+    def __init__(self, nome, idade, nomeTutor, porte):
         if not hasattr(self, '_initialized'):
             super().__init__(nome, idade, nomeTutor, porte)
             self._initialized = True
@@ -28,9 +28,9 @@ class Gato(Animal):
     _instance = None
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
-            cls._instance = super(Cachorro, cls).__new__(cls)
+            cls._instance = super(Gato, cls).__new__(cls)
         return cls._instance
-    def __init__(self, nome, idade, porte, nomeTutor):
+    def __init__(self, nome, idade, nomeTutor, porte):
         if not hasattr(self, '_initialized'):
             super().__init__(nome, idade, nomeTutor, porte)
             self._initialized = True
@@ -43,9 +43,9 @@ class Passaro(Animal):
     _instance = None
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
-            cls._instance = super(Cachorro, cls).__new__(cls)
+            cls._instance = super(Passaro, cls).__new__(cls)
         return cls._instance
-    def __init__(self, nome, idade, porte, nomeTutor):
+    def __init__(self, nome, idade, nomeTutor, porte):
         if not hasattr(self, '_initialized'):
             super().__init__(nome, idade, nomeTutor, porte)
             self._initialized = True
