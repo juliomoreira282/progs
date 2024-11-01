@@ -6,15 +6,15 @@ class Animal():
 
 class Cachorro(Animal):
     def comunicacao(self):
-        print(f"Meu nome é {self.nome} e meu dono é {self.nomeTutor}")
+        print(f"Meu nome é {self.nome} e meu dono é {self.nomeTutor}.")
     def comportamento(self):
-        print(f"Gosto delatir e de brincar com meu dono {self.nomeTutor}")
+        print(f"Gosto de latir e de brincar com meu dono {self.nomeTutor}.")
 
 class Gato(Animal):
     def comunicacao(self):
-        print(f"Meu nome é {self.nome} e meu dono é {self.nomeTutor}")
+        print(f"Meu nome é {self.nome} e meu dono é {self.nomeTutor}.")
     def comportamento(self):
-        print(f"Gosto de dormir e de ignorar meu dono {self.nomeTutor}")
+        print(f"Gosto de dormir e de ignorar meu dono {self.nomeTutor}.")
 
 class Passaro(Animal):
     def comunicacao(self):
