@@ -35,7 +35,6 @@ class AnimalFactory():
             case _:
                 return None
 
-
 c = AnimalFactory.criaranimal("cachorro", "Fred", 5, "Victor", "Médio")
 c.comunicacao()
 c.comportamento()
