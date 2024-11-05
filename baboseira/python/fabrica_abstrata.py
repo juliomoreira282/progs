@@ -53,5 +53,5 @@ def criarExibirAnimal(factory: AnimalFactory, nome, idade, nomeTutor, porte):
     animal.comportamento()
 
 criarExibirAnimal(FabricaCachorro(), "Bebeto", 8, "Marcelo", "Pequeno")
-criarExibirAnimal(FabricaGato(), "Bolinha", 7, "Laís", "Pequeno")
+criarExibirAnimal(FabricaGato(), "Bolinha", 7, "Tifa", "Pequeno")
 criarExibirAnimal(FabricaPassaro(), "Juninho", 10, "Denise", "Médio")

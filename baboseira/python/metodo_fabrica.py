@@ -44,7 +44,7 @@ c = AnimalFactory.criarAnimal("Cachorro", "Bebeto", 8, "Marcelo", "Pequeno")
 c.comunicacao()
 c.comportamento()
 
-g = AnimalFactory.criarAnimal("gato", "Bolinha", 7, "Laís", "Pequeno")
+g = AnimalFactory.criarAnimal("gato", "Bolinha", 7, "Tifa", "Pequeno")
 g.comunicacao()
 g.comportamento()
 
