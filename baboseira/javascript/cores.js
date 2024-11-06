@@ -1,6 +1,6 @@
-const brain = require('brain.js');
+import { NeuralNetwork } from 'brain.js';
 
-const net = new brain.NeuralNetwork();
+const net = new NeuralNetwork();
 
 const trainingData = [
     { input: {r: 1, g: 0, b: 0}, output: { vermelho: 1}},
