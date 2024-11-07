@@ -111,11 +111,11 @@ gato.comunicacao();
 gato.comportamento();
 
 const passaro = builder
-.setNome("Marcelo")
-.setIdade(13)
-.setNomeTutor("Gabriel")
-.setPorte("Pequeno")
-.setTipoAnimal("passaro")
-.build();
+    .setNome("Marcelo")
+    .setIdade(13)
+    .setNomeTutor("Gabriel")
+    .setPorte("Pequeno")
+    .setTipoAnimal("passaro")
+    .build();
 passaro.comunicacao();
 passaro.comportamento();
