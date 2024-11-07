@@ -42,7 +42,7 @@ class Passaro extends Animal {
 }
 
 class AnimalFactory {
-    criarAnimal(nome, idade, nomeTutor, porte) {
+    criarAnimal(_nome, _idade, _nomeTutor, _porte) {
         throw "Abstract Method";
     }
 }
