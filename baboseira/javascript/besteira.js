@@ -31,38 +31,23 @@ class Gato extends Animal {
     }
 }
 
-class Passaro extends Animal {
-    comunicacao() {
-        console.log(`Meu nome é ${this.nome} e meu dono é ${this.nomeTutor}.`);
-    }
-    comportamento() {
-        console.log(`Gosto muito de cantar para meu dono ${this.nomeTutor}.`);
-    }
-}
-
 class AnimalFactory {
-    static criarAnimal(tipo, nome, idade, nomeTutor, porte) {
+    static criarAnimal(nome, idade, nomeTutor, porte, tipo) {
         switch(tipo.toLowerCase()) {
             case "cachorro":
                 return new Cachorro(nome, idade, nomeTutor, porte);
             case "gato":
                 return new Gato(nome, idade, nomeTutor, porte);
-            case "passaro":
-                return new Passaro(nome, idade, nomeTutor, porte);
             default:
                 return null;
         }
     }
 }
 
-const cachorro = AnimalFactory.criarAnimal("cachorro", "Leo", 9, "Francisco", "Grande");
+cachorro = AnimalFactory.criarAnimal("Plínio", 3, "Rodolfo", "Pequeno", "cachorro");
 cachorro.comunicacao();
 cachorro.comportamento();
 
-const gato = AnimalFactory.criarAnimal("gato", "Neve", 5, "William", "Pequeno");
+gato = AnimalFactory.criarAnimal("Jujuba", 6, "Larissa", "Pequeno", "gato");
 gato.comunicacao();
 gato.comportamento();
-
-const passaro = AnimalFactory.criarAnimal("passaro", "Marcelo", 13, "Gabriel", "Médio");
-passaro.comunicacao();
-passaro.comportamento();
