@@ -20,7 +20,6 @@ pygame.draw.polygon(screen, vermelho, [(235, 300), (350, 250), (465, 300)])
 pygame.draw.polygon(screen, marrom, [(50, 350), (50, 500), (75, 500), (75, 350)])
 pygame.draw.circle(screen, verde, (63,325),75)
 
-
 desenhando = True
 while desenhando:
     for event in pygame.event.get():
