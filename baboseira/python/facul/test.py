@@ -9,7 +9,7 @@ pygame.display.set_caption("Primitivas Gráficas 2D")
 desenhando = True
 while desenhando:
     for event in pygame.get():
-        if event.type == pygame.quit():
+        if event.type == pygame.QUIT():
             desenhando = False
     pygame.display.flip()
 
