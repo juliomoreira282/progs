@@ -1,5 +1,4 @@
 import pygame
-import sys
 import math
 
 pygame.init()
@@ -59,7 +58,6 @@ while desenhar:
         if evento.type == pygame.QUIT:
             desenhar = False
             pygame.quit()
-            sys.exit()
 
     # Cálculo da posição do movimento em arco
     posicao_x = movimento_maximo * (tempo / tempo_maximo) # Movimentação Horizontal  
