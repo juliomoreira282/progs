@@ -2,10 +2,12 @@ def calcular():
     print("Bem vindo à minha calculadora!")
     print("Operações disponíveis: +, -, *, /.")
 
-while True:
+continuar = True
+while continuar:
     try:
         operacao = input("Digite a operação a ser realizada: (+, -, *, /) ou 'Sair' para encerrar: ")
         if operacao.capitalize() == 'Sair':
+            continuar = False
             print("Encerrando a calculadora. Até a próxima.")
             break
         if operacao not in ['+', '-', '*', '/']:
@@ -31,5 +33,5 @@ while True:
     except Exception as e:
         print(f"Erro inesperado: {e}")
 
-if __name__ == '__main__':
+if __name__ == 'main':
     calcular()
