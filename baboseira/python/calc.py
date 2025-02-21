@@ -31,5 +31,5 @@ while True:
     except Exception as e:
         print(f"Erro inesperado: {e}")
 
-if __name__ == 'main':
+if __name__ == '__main__':
     calcular()
