@@ -2,10 +2,11 @@ class TuringMachine {
     constructor(tape, rules, startState, acceptState) {
         this.tape = tape;
         this.rules = rules;
-        this.state = startState;
+        this.startState = startState;
         this.acceptState = acceptState;
         this.head = 0;
     }
+
     step() {
         const currentSymbol = this.tape[this.head];
         const rule = this.rules[this.state]?.[currentSymbol];
@@ -23,20 +24,22 @@ class TuringMachine {
             this.head--;
         }
     }
+
     run() {
         console.log(`Fita inicial: ${this.tape.join('')}`);
         while(this.state !== this.acceptState) {
             if(!this.step()) break;
-            console.log(`Estado: ${this.state}, Fita: ${this.state.join('')}, Cabeçote em ${this.head}`);
+            console.log(`Estado: ${this.state}, Fita: ${this.tape.join('')}, Cabeçote em: ${this.head}`);
         }
         if(this.state === this.acceptState) {
             console.log(`Máquina aceitou a fita: ${this.tape.join('')}`);
         }
         else {
-            console.log(`Máquina parou sem aceitar.`)
+            console.log("Máquina parou sem aceitar.");
         }
     }
 }
+
 const fita = ['A', 'B', 'C', '_', '_', '_'];
 const regras = {
     'q0': {
@@ -57,6 +60,6 @@ const regras = {
     },
 };
 const estadoInicial = 'q0';
-const estadoFinal = 'q2';
+const estadoFinal = 'q1';
 const maquina = new TuringMachine(fita, regras, estadoInicial, estadoFinal);
 maquina.run();
