@@ -34,7 +34,7 @@ def desenhar_sol(angulo, posicao_x, posicao_y):
         pygame.draw.polygon(tela, VERMELHO, [(235, 300), (350, 200), (465, 300)])
         pygame.draw.polygon(tela, MARROM, [(100, 350), (100, 500), (75, 500), (75, 350)])
         pygame.draw.circle(tela, VERDE, (88, 325), 75)
-        pygame.draw.polygon(tela, VERDE, [(0, 800), (0, 500), (800, 500), (800, 800)])
+        pygame.draw.polygon(tela, VERDE, [(0, 600), (0, 500), (800, 500), (800, 600)])
         pygame.draw.polygon(tela, AMARELO, [(325, 500), (325, 425), (375, 425), (375, 500)])
  
 angulo = 0
