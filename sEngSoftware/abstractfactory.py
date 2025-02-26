@@ -32,6 +32,7 @@ class Passaro(Animal):
         print(f"Gosto muito de cantar para meu dono {self.nomeTutor}.")
 
 class AnimalFactory(ABC):
+    @abstractmethod
     def criarAnimal(self, nome, idade, nomeTutor, porte) -> Animal:
         pass
 
