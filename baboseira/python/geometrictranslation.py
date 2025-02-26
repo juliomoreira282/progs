@@ -35,12 +35,12 @@ def desenharSol(angulo, posicaoX, posicaoY):
         pygame.draw.polygon(screen, MARROM, [(100, 350), (100, 500), (75, 500), (75, 350)])
         pygame.draw.circle(screen, VERDE, (88, 325), 75)
         pygame.draw.polygon(screen, VERDE, [(0, 600), (0, 500), (800, 500), (800, 600)])
-        pygame.draw.polygon(screen, AMARELO, [(325, 500), (325, 425), (375, 425), (375, 425)])
+        pygame.draw.polygon(screen, AMARELO, [(325, 500), (325, 425), (375, 425), (375, 500)])
 
 angulo = 0
 tempo = 0
 movimentoMaximo = 800
-velocidade = 0.05
+velocidade = 0.075
 tempoMaximo = 200
 desenhar = True
 while desenhar:
