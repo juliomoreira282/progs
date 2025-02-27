@@ -40,7 +40,7 @@ def desenharSol(angulo, posicaoX, posicaoY):
 angulo = 0
 tempo = 0
 movimentoMaximo = 800
-velocidade = 0.075
+velocidade = 0.05
 tempoMaximo = 200
 desenhar = True
 while desenhar:
