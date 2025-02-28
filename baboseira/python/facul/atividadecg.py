@@ -45,6 +45,7 @@ while rodando:
     y += velocidadeVertical
     spdY += gravidade
     y += spdY
+    
     if x > largura - 50 or x < 50:
         spdX = -spdX
     if y > altura - 50 or y < 50:
@@ -53,6 +54,7 @@ while rodando:
     elif y < 50:
         y = 50
         spdY = -spdY
+    
     pygame.draw.circle(screen, BRANCO, (x, y), 50)
     pygame.display.flip()
     clock.tick(60)
