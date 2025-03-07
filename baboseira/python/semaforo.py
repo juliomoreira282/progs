@@ -4,9 +4,9 @@ from colorama import init, Fore, Style
 init(autoreset=True)
 def simular_semaforo():
     estados = [
-        ("Verde", 5, Fore.GREEN),
-        ("Amarelo", 2, Fore.YELLOW),
-        ("Vermelho", 5, Fore.RED)
+        ("Verde", 45, Fore.GREEN),
+        ("Amarelo", 3, Fore.YELLOW),
+        ("Vermelho", 45, Fore.RED)
     ]
 
     while True:
