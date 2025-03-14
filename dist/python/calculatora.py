@@ -31,4 +31,4 @@ while continuar:
     except ZeroDivisionError as zde:
         print(f"Erro. {zde}")
     except Exception as e:
-        print(f"Erro Inesperado: {e}") 
+        print(f"Erro Inesperado: {e}")
