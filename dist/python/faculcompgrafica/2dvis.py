@@ -18,6 +18,7 @@ while rodando:
         if event.type == pygame.QUIT:
             rodando = False
     keys = pygame.key.get_pressed()
+    
     if keys[pygame.K_LEFT] or keys[pygame.K_a]:
         x -= velocidade
     elif keys[pygame.K_RIGHT] or keys[pygame.K_d]:
