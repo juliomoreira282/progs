@@ -60,3 +60,5 @@ while desenhar:
     if tempo > tempoMaximo:
         tempo = 0
     pygame.display.flip()
+
+pygame.quit()
