@@ -10,9 +10,17 @@ BRANCO = (255, 255, 255)
 PRETO = (0, 0, 0)
 
 x, y = 200, 200
-velocidade = 0.5
+velocidade = 10
+tamanho = 50
+angulo = 0
+
+posicaoInicial = (200, 200)
+tamanhoInicial = 50
+anguloInicial = 0
 rodando = True
+
 while rodando:
+    pygame.time.delay(10)
     screen.fill(PRETO)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -21,15 +29,34 @@ while rodando:
     
     if keys[pygame.K_LEFT] or keys[pygame.K_a]:
         x -= velocidade
-    elif keys[pygame.K_RIGHT] or keys[pygame.K_d]:
+    if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
         x += velocidade
     
     if keys[pygame.K_UP] or keys[pygame.K_w]:
         y -= velocidade
-    elif keys[pygame.K_DOWN] or keys[pygame.K_s]:
+    if keys[pygame.K_DOWN] or keys[pygame.K_s]:
         y += velocidade
     
-    pygame.draw.rect(screen, (BRANCO), [x, y, 50, 50])
-
+    if keys[pygame.K_PLUS] or keys[pygame.K_KP_PLUS]:
+        tamanho += 5
+    if keys[pygame.K_MINUS] or keys[pygame.K_KP_MINUS]:
+        tamanho = max(10, tamanho - 5)
+    
+    
+    if keys[pygame.K_e]:
+        angulo -= 5
+    if keys[pygame.K_q]:
+        angulo += 5   
+    
+    if keys[pygame.K_r]:
+        x, y = posicaoInicial
+        tamanho = tamanhoInicial
+        angulo = anguloInicial
+    
+    ret = pygame.Surface((tamanho, tamanho), pygame.SRCALPHA)
+    ret.fill(BRANCO)
+    retRotacionado = pygame.transform.rotate(ret, angulo)
+    retPosicao = retRotacionado.get_rect(center=(x + tamanho // 2, y + tamanho // 2))
+    screen.blit(retRotacionado, retPosicao.topleft)
     pygame.display.flip()
 pygame.quit()
