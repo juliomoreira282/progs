@@ -4,7 +4,7 @@ from pygame.locals import *
 INSIDE = 0
 LEFT = 1
 RIGHT = 2
-BOTTOM= 4
+BOTTOM = 4
 TOP = 8
 
 def compute_code(x, y, ret):
