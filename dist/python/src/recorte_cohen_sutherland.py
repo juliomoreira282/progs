@@ -71,7 +71,7 @@ def main():
     BRANCO = (255, 255, 255)
     VERMELHO = (255, 0, 0)
     AZUL = (0, 0, 255)
-    CINZA = (100, 100, 101)
+    CINZA = (100, 100, 100)
 
     des_ret = False
     ret = [0, 0, 0, 0]
