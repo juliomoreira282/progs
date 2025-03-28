@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main() {
     int matriz[3][3];
     printf("Digite os elementos da matriz: \n");
