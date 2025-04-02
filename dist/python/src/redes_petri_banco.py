@@ -11,30 +11,30 @@ class CaixaEletronicoPetri():
     def depositar(self, valor = 0.0):
         self.places["Depósito"] += valor
         self.places["Saldo"] += valor
-        print(f"Depósito de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']}")
+        print(f"Depósito de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']} \n")
     
     def sacar(self, valor = 0.0):
         if self.places["Saldo"] >= valor:
             self.places["Saque"] += valor
             self.places["Saldo"] -= valor
-            print(f"Saque de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']}")
+            print(f"Saque de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']} \n")
         else:
             print("Saldo insuficiente.")
     
     def consultar_saldo(self):
         self.places["Consulta"] += 1
-        print(f"Saldo atual: R$ {self.places['Saldo']}")
+        print(f"Saldo atual: R$ {self.places['Saldo']} \n")
     
     def definir_saldo_inicial(self):
         valor = float(input("Informe o saldo inicial: "))
         self.saldo = valor
         self.places["Saldo"] = valor
-        print(f"Saldo inicial definido como R$ {self.saldo:.2f}")
+        print(f"Saldo inicial definido como R$ {self.saldo:.2f} \n")
 
     def menu(self):
         operando = True
         while operando:
-            print("\nCaixa Eletrônico")
+            print("Caixa Eletrônico")
             print("1. Depositar")
             print("2. Sacar")
             print("3. Consultar Saldo")
