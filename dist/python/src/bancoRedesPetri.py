@@ -11,19 +11,19 @@ class RedePetriBanco():
     def depositar(self, valor = 0.0):
         self.places['Depósito'] += valor
         self.places['Saldo'] += valor
-        print(f"Depósito de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']} \n")
+        print(f"Depósito de R$ {valor:.2f} realizado. Saldo atual: R$ {self.places['Saldo']:.2f} \n")
 
     def sacar(self, valor = 0.0):
         if self.places['Saldo'] >= valor:
             self.places['Saque'] += valor
             self.places['Saldo'] -= valor
-            print(f"Saque de R$ {valor} realizado. Saldo atual: R$ {self.places['Saldo']} \n")
+            print(f"Saque de R$ {valor:.2f} realizado. Saldo atual: R$ {self.places['Saldo']:.2f} \n")
         else:
             print("Saldo insuficiente.")
     
     def consultar_saldo(self):
         self.places['Consulta'] += 1
-        print(f"Saldo atual: R$ {self.places['Saldo']} \n")
+        print(f"Saldo atual: R$ {self.places['Saldo']:.2f} \n")
     
     def definir_saldo_inicial(self):
         valor = float(input("Informe o saldo inicial: "))
