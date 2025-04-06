@@ -39,17 +39,17 @@ class RedePetriBanco():
             print("2. Sacar")
             print("3. Consultar Saldo")
             print("4. Sair")
-            operacao = int(input("Informe a operação a ser realizada: "))
+            operacao = input("Informe a operação a ser realizada: ")
             match(operacao):
-                case 1:
+                case '1':
                     valor = float(input("Informe o valor do depósito: "))
                     self.depositar(valor)
-                case 2:
+                case '2':
                     valor = float(input("Informe o valor do saque: "))
                     self.sacar(valor)
-                case 3:
+                case '3':
                     self.consultar_saldo()
-                case 4:
+                case '4':
                     print("Saindo...")
                     operando = False
                     break
