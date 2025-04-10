@@ -41,7 +41,7 @@ class PetriNet:
             print(f" - {place}")
         print()
 
-    def aidcionar_pedidos(self, quantidade):
+    def adicionar_pedidos(self, quantidade):
         if "Entrada" in self.places:
             self.places['Entrada'].tokens += quantidade
             print(f"{quantidade} novo(s) pedido(s) aidcionado(s) à entrada.")
@@ -68,7 +68,7 @@ class PetriNet:
             elif comando.capitalize().startswith("Novo"):
                 try:
                     qtd = int(comando.split()[1])
-                    self.aidcionar_pedidos(qtd)
+                    self.adicionar_pedidos(qtd)
                 except(IndexError, ValueError):
                     print("Use o comando no formato: novo <quantidade>.")
             else:
