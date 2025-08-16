@@ -17,7 +17,7 @@ class RedePetriBanco:
         if self.places['Saldo'] >= valor:
             self.places['Saque'] += valor
             self.places['Saldo'] -= valor
-            print(f"Sauqe de R$ {valor:.2f} realizado. Saldo atual: R$ {self.places['Saldo']:.2f} \n")
+            print(f"Saque de R$ {valor:.2f} realizado. Saldo atual: R$ {self.places['Saldo']:.2f} \n")
         else:
             print("Saldo insuficiente.")
 
