@@ -1,3 +1,4 @@
+
 /* ============================================================
    Music Trainer - Reconhecimento Multimodal (Áudio + Imagem)
    Desenvolvido para integrar modelos do Teachable Machine
@@ -5,7 +6,7 @@
 
 // URLs dos modelos exportados do Teachable Machine
 const audioURL = "https://teachablemachine.withgoogle.com/models/X4RvKRucp/"; // Áudio
-const imageURL = "https://teachablemachine.withgoogle.com/models/5HtSQCDyD/"; // Imagem
+const imageURL = "https://teachablemachine.withgoogle.com/models/ZO7xfr60M/"; // Imagem
 
 // Variáveis globais
 let recognizer, imageModel, webcam;
