@@ -1,4 +1,4 @@
-pilha_livros = ["Dom Casmurro", "A Hora da Estrela"]
+pilha_livros: list[str] = ["Dom Casmurro", "A Hora da Estrela"]
 
 pilha_livros.append("O Alquimista")
 
