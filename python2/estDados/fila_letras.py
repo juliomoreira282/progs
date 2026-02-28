@@ -1,22 +1,22 @@
 fila = []
 
-fila.append("C")
-fila.append("B")
 fila.append("A")
+fila.append("B")
+fila.append("C")
+fila.append("D")
+fila.append("E")
+fila.append("F")
 
 print(fila)
 
-atendido = fila.pop(0)
+clientes_totais = ""
 
-print(atendido)
-print(fila)
+while len(fila) > 0:
+    atendido = fila.pop(0)
+    clientes_totais += atendido
+    print(clientes_totais)
+    print(fila)
 
-primeiro = fila[0]
-print(primeiro)
-
-ultimo = fila[-1]
-
-print(ultimo)
 
 if len(fila) == 0:
     print("Fila vazia.")
