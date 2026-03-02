@@ -8,10 +8,14 @@ fila.append("Carolina")
 
 print(f"Pessoas na fila: {fila}")
 
-fila.pop(0)
+atendido1 =  fila.pop(0)
+
+print(f"Atendido agora: {atendido1}")
 
 print(f"Pessoas na fila: {fila}")
 
-fila.pop(0)
+atendido2 = fila.pop(0)
+
+print(f"Atendido agora: {atendido2}")
 
 print(f"Pessoas na fila: {fila}")
