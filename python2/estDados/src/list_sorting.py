@@ -3,7 +3,7 @@ swapped = True
 num = int(input("Quantos elementos deseja embaralhar? "))
 
 for i in range(num):
-    val = float(input("Entre com a lista de elementos: "))
+    val = int(input("Entre com a lista de elementos: "))
     my_list.append(val)
 
 while swapped:
