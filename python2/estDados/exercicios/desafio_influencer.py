@@ -48,6 +48,7 @@ while True:
         elif comando.lower() == 'a': # Comando para adicionar um seguidor colocando-o no final da lista
             add_usuario = input("Qual o nome de usuário a ser adicionado à lista de seguidores? Use o '@' antes de seu nome de usuário. \n")
             seguidores.append(add_usuario)
+            print(f"{add_usuario} foi adicionado à lista de seguidores.")
             print(f"Qtde. de seguidores: {len(seguidores)} | Seguidores: {seguidores}")
 
         elif comando.lower() == 'v': # Comando para adicionar um usuário VIP, colocando-o no índice 0 da lista
