@@ -42,12 +42,14 @@ def merge(esq, dir):
         if esq[i] <= dir[j]: resultado.append(esq[i]); i += 1
         else: resultado.append(dir[j]); j += 1
 
+    return resultado + esq[i:] + dir[j:]   
+
 def busca_binaria(lista_ordenada: list, valor_procurado: int):
     inicio = 0
     fim = len(lista_ordenada) - 1
 
     while inicio <= fim:
-        meio = inicio + fim // 2
+        meio = (inicio + fim) // 2
         chute = lista_ordenada[meio]
         if chute == valor_procurado:
             return f"Achei na posição {meio}!"
@@ -61,8 +63,11 @@ def busca_binaria(lista_ordenada: list, valor_procurado: int):
     return "Não está na lista."
 
 lista_ordenada = merge_sort(lista_cooperados)
+valor_alvo = 70
 
 inicio_tempo = time.perf_counter()
+
+resultado_da_busca = busca_binaria(lista_ordenada, valor_alvo)
 
 fim_tempo = time.perf_counter()
 
@@ -80,7 +85,7 @@ fonte_texto = pygame.font.SysFont("arial", 22)
 texto_titulo = fonte_titulo.render("Resultados da Busca", True, (255, 255, 255))
 texto_itens = fonte_texto.render(f"Total de itens na lista: {len(lista_cooperados)}", True, (200, 200, 200))
 texto_tempo = fonte_texto.render(f"Tempo de execução: {tempo_execucao:.9f} segundos", True, (50, 255, 50))
-texto_item_procurado = fonte_texto.render(busca_binaria(lista_cooperados, 70), True, (200, 200, 200))
+texto_item_procurado = fonte_texto.render(f"Procurando {valor_alvo}: {resultado_da_busca}", True, (200, 200, 200))
 
 executando = True
 while executando:
